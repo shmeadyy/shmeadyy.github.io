@@ -1,35 +1,17 @@
 <html>
 	<head>
-		<script type="text/javascript">
-			window.mopub = [{
-				ad_unit: "5afaebf51e9345d8ae804ab4c69b6151",
-			    ad_container_id: "jsTest", // Specify the div or container to which you’d like to the mobile web tag
-			    ad_width: 320,
-			    ad_height: 50,
-			    keywords: "", // Optionally pass keywords as a comma separated list
-			  } ]; // To load additional ad units, add another object into the array.
-			  
-			  (function() {
-			  	var mopubjs = document.createElement("script");
-			  	mopubjs.async = true;
-			  	mopubjs.type = "text/javascript";
-			  	mopubjs.src = "//d1zg4cyg8u4pko.cloudfront.net/mweb/mobileweb.min.js";
-			  	var node = document.getElementsByTagName("script")[0];
-			  	node.parentNode.insertBefore(mopubjs, node);
-	  		})();
-		</script>
-		<style>
-			.container{
-				width: 75%;
-				text-align: center;
-				margin: auto;
-			}
-		</style>
+	
 	</head>
 	<body>
-		<div class="container">
-			<h1>Testing JS Tags With A SSL Connection</h1>
-			<div id="jsTest"></div>
-		</div>
+		<a id="loadApp" href="twitter://timeline"></a>
+		<script type="text/javascript">var CLICK_ID = "${CLICK_ID}";var CLICK_TIMEOUT_URL = location.protocol+"//"+location.hostname+(location.port ? ":"+location.port:
+		"") + "/events/record-click-timeout" + "?id=" + CLICK_ID;var clickedAt = null;function fireEvent(element,event) {if (document.createEvent) {var evt = document.createEvent("HTMLEvents");evt.initEvent(event, true, true);return 
+	!element.dispatchEvent(evt);} else {var evt = document.createEventObject();return element.fireEvent('on'+event,evt);}};window.onload = function(){fireEvent(document.getElementById("loadApp"),'click');clickedAt = +new Date;setT
+	imeout(function () {        if (+new Date - clickedAt < 2000 && !window.document.webkitHidden) {                                                                                                                                 f
+		ireFailedAppOpen(CLICK_TIMEOUT_URL);        }    }, 1500);};function fireFailedAppOpen(url) {                                                                                                                                    v
+		ar xhr = new XMLHttpRequest();  xhr.ontimeout = loadSecondaryCustomUrl; xhr.onabort = loadSecondaryCustomUrl;                                                                                                                    x
+		hr.onerror = loadSecondaryCustomUrl;    xhr.onloadend = loadSecondaryCustomUrl;                                                                                                                                                  x
+		hr.onload = loadSecondaryCustomUrl;     xhr.open("GET", url, true);     xhr.timeout = 1000;                                                                                                                                      x
+		hr.send(null);};function loadSecondaryCustomUrl () {            window.location.replace("www.mopub.com");};</script>
 	</body>
 </html>
