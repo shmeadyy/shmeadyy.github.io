@@ -1,17 +1,55 @@
+<!--<html>-->
+<!--	<head>-->
+	
+<!--	</head>-->
+<!--	<body>-->
+<!--		<a id="loadApp" href="twitter://timeline"></a>-->
+<!--		<script type="text/javascript">var CLICK_ID = "12345";var CLICK_TIMEOUT_URL = location.protocol+"//"+location.hostname+(location.port ? ":"+location.port:-->
+<!--		"") + "/events/record-click-timeout" + "?id=" + CLICK_ID;var clickedAt = null;function fireEvent(element,event) {if (document.createEvent) {var evt = document.createEvent("HTMLEvents");evt.initEvent(event, true, true);return -->
+<!--	!element.dispatchEvent(evt);} else {var evt = document.createEventObject();return element.fireEvent('on'+event,evt);}};window.onload = function(){fireEvent(document.getElementById("loadApp"),'click');clickedAt = +new Date;setT-->
+<!--	imeout(function () {        if (+new Date - clickedAt < 2000 && !window.document.webkitHidden) {                                                                                                                                 f-->
+<!--		ireFailedAppOpen(CLICK_TIMEOUT_URL);        }    }, 1500);};function fireFailedAppOpen(url) {                                                                                                                                    v-->
+<!--		ar xhr = new XMLHttpRequest();  xhr.ontimeout = loadSecondaryCustomUrl; xhr.onabort = loadSecondaryCustomUrl;                                                                                                                    x-->
+<!--		hr.onerror = loadSecondaryCustomUrl;    xhr.onloadend = loadSecondaryCustomUrl;                                                                                                                                                  x-->
+<!--		hr.onload = loadSecondaryCustomUrl;     xhr.open("GET", url, true);     xhr.timeout = 1000;                                                                                                                                      x-->
+<!--		hr.send(null);};function loadSecondaryCustomUrl () {            window.location.replace("www.mopub.com");};</script>-->
+<!--	</body>-->
+<!--</html>-->
+
 <html>
 	<head>
-	
+	<title>adjust deeplinking...</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<meta name="viewport" content="width=640, user-scalable=yes" />
 	</head>
 	<body>
-		<a id="loadApp" href="twitter://timeline"></a>
-		<script type="text/javascript">var CLICK_ID = "12345";var CLICK_TIMEOUT_URL = location.protocol+"//"+location.hostname+(location.port ? ":"+location.port:
-		"") + "/events/record-click-timeout" + "?id=" + CLICK_ID;var clickedAt = null;function fireEvent(element,event) {if (document.createEvent) {var evt = document.createEvent("HTMLEvents");evt.initEvent(event, true, true);return 
-	!element.dispatchEvent(evt);} else {var evt = document.createEventObject();return element.fireEvent('on'+event,evt);}};window.onload = function(){fireEvent(document.getElementById("loadApp"),'click');clickedAt = +new Date;setT
-	imeout(function () {        if (+new Date - clickedAt < 2000 && !window.document.webkitHidden) {                                                                                                                                 f
-		ireFailedAppOpen(CLICK_TIMEOUT_URL);        }    }, 1500);};function fireFailedAppOpen(url) {                                                                                                                                    v
-		ar xhr = new XMLHttpRequest();  xhr.ontimeout = loadSecondaryCustomUrl; xhr.onabort = loadSecondaryCustomUrl;                                                                                                                    x
-		hr.onerror = loadSecondaryCustomUrl;    xhr.onloadend = loadSecondaryCustomUrl;                                                                                                                                                  x
-		hr.onload = loadSecondaryCustomUrl;     xhr.open("GET", url, true);     xhr.timeout = 1000;                                                                                                                                      x
-		hr.send(null);};function loadSecondaryCustomUrl () {            window.location.replace("www.mopub.com");};</script>
+	<script>
+	
+		start = Date.now();
+		function try_close(){
+			//location.replace('about://');
+		}
+
+		function store_or_close(){
+			now = Date.now();
+			if (now - start > 3000) {
+				try_close();
+			} else {
+				window.location.replace("blah://");
+				setTimeout(function () {
+					try_close();
+				}, 1000);
+			}
+		}
+
+		setTimeout(function () {
+			store_or_close();
+		}, 0);
+	
+	</script>
+	
+		<!-- <iframe style="display:none" height=0 width=0 src="twitter://timeline"></iframe> -->
+		
 	</body>
-</html>
+	</html>
