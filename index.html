@@ -23,32 +23,31 @@
 <!--<meta name="viewport" content="width=640, user-scalable=yes" />-->
 <!--</head>-->
 <body>
-<!--<script>-->
+<script>
 
-<!--start = Date.now();-->
-<!--function try_close(){-->
-<!--location.replace('http://www.google.com');-->
-<!--}-->
+start = Date.now();
+function try_close(){
+location.replace('http://www.google.com');
+}
 
-<!--function store_or_close(){-->
-<!--now = Date.now();-->
-<!--if (now - start > 3000) {-->
-<!--try_close();-->
-<!--} else {-->
-<!--window.location.replace("not://valid");-->
-<!--setTimeout(function () {-->
-<!--try_close();-->
-<!--}, 1000);-->
-<!--}-->
-<!--}-->
+function store_or_close(){
+now = Date.now();
+if (now - start > 3000) {
+try_close();
+} else {
+window.location.replace("not://valid");
+setTimeout(function () {
+try_close();
+}, 1000);
+}
+}
 
-<!--setTimeout(function () {-->
-<!--store_or_close();-->
-<!--}, 0);-->
+setTimeout(function () {
+store_or_close();
+}, 0);
 
-<!--</script>-->
+</script>
 
 <!-- <iframe style="display:none" height=0 width=0 src="twitter://timeline"></iframe> -->
-<h1>Changes</h1>
 </body>
 </html>
