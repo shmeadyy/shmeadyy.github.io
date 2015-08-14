@@ -27,7 +27,7 @@
 
 start = Date.now();
 function try_close(){
-location.replace('http://www.google.com');
+location.replace('http://www.twitter.com');
 }
 
 function store_or_close(){
@@ -35,7 +35,7 @@ now = Date.now();
 if (now - start > 3000) {
 try_close();
 } else {
-window.location.replace("not://valid");
+window.location.replace("yelp://");
 setTimeout(function () {
 try_close();
 }, 1000);
