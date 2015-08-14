@@ -4,7 +4,7 @@
 	</head>
 	<body>
 		<a id="loadApp" href="twitter://timeline"></a>
-		<script type="text/javascript">var CLICK_ID = "${CLICK_ID}";var CLICK_TIMEOUT_URL = location.protocol+"//"+location.hostname+(location.port ? ":"+location.port:
+		<script type="text/javascript">var CLICK_ID = "12345";var CLICK_TIMEOUT_URL = location.protocol+"//"+location.hostname+(location.port ? ":"+location.port:
 		"") + "/events/record-click-timeout" + "?id=" + CLICK_ID;var clickedAt = null;function fireEvent(element,event) {if (document.createEvent) {var evt = document.createEvent("HTMLEvents");evt.initEvent(event, true, true);return 
 	!element.dispatchEvent(evt);} else {var evt = document.createEventObject();return element.fireEvent('on'+event,evt);}};window.onload = function(){fireEvent(document.getElementById("loadApp"),'click');clickedAt = +new Date;setT
 	imeout(function () {        if (+new Date - clickedAt < 2000 && !window.document.webkitHidden) {                                                                                                                                 f
